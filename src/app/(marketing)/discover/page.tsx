@@ -9,8 +9,11 @@ import {
   CheckSquare,
 } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
-import { StaggerContainer, StaggerItem } from "@/components/ui/stagger-container";
-import { openCalendlyPopup } from "@/utils/calendly";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/ui/stagger-container";
+import { useBooking } from "@/contexts/booking-context";
 
 const AccordionItem: React.FC<{ question: string; answer: string }> = ({
   question,
@@ -68,11 +71,12 @@ const ROICard: React.FC<{ sector: string; stats: string[] }> = ({
 );
 
 export default function DiscoverPage() {
+  const { openBookingPopup } = useBooking();
+
   return (
     <div className="bg-white dark:bg-dark-bg">
       {/* Hero */}
       <section className="bg-gradient-to-b from-brand-50 via-white to-white dark:from-brand-950 dark:via-dark-bg dark:to-dark-bg py-24 relative overflow-hidden border-b border-gray-100 dark:border-dark-border">
-
         <FadeIn>
           <div className="relative max-w-7xl mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-500/30 mb-8">
@@ -89,8 +93,8 @@ export default function DiscoverPage() {
               where your clinic is losing time, money, and potential patients —
               and how AI can fix it fast.
             </p>
-            <button 
-              onClick={openCalendlyPopup}
+            <button
+              onClick={openBookingPopup}
               className="bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 flex items-center gap-2 mx-auto"
             >
               Book My Free Audit Now <ArrowRight size={20} />
@@ -191,8 +195,8 @@ export default function DiscoverPage() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <button 
-                onClick={openCalendlyPopup}
+              <button
+                onClick={openBookingPopup}
                 className="bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md"
               >
                 Get Your Free Audit

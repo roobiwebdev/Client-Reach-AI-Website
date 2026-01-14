@@ -4,10 +4,13 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { Cpu, Briefcase, Rocket } from "lucide-react";
+// ... imports
 import { FadeIn } from "@/components/ui/fade-in";
-import { openCalendlyPopup } from "@/utils/calendly";
+import { useBooking } from "@/contexts/booking-context";
 
 export default function AboutPage() {
+  const { openBookingPopup } = useBooking();
+
   return (
     <div className="min-h-screen bg-white dark:bg-dark-bg">
       {/* Consultation Intro */}
@@ -31,7 +34,7 @@ export default function AboutPage() {
                 harming the patient experience.
               </p>
               <button
-                onClick={openCalendlyPopup}
+                onClick={openBookingPopup}
                 className="inline-block px-8 py-4 bg-brand-500 text-white font-medium rounded-full transition-all shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 hover:scale-105"
               >
                 Get Your Free Consultation

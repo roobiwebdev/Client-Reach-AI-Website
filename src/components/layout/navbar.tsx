@@ -2,14 +2,17 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Sun, Moon, Phone } from "lucide-react";
+// ... imports
 import { useTheme } from "@/contexts/theme-context";
-import { openCalendlyPopup } from "@/utils/calendly";
+import { useBooking } from "@/contexts/booking-context";
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
+  const { openBookingPopup } = useBooking();
   const pathname = usePathname();
 
   const navLinks = [
@@ -22,6 +25,10 @@ export const Navbar: React.FC = () => {
 
   const isActive = (path: string) => pathname === path;
 
+  // Prevent hydration mismatch by only rendering the theme toggle content after mount
+  // Defaults to Moon (Light mode) which matches server-side rendering
+  const ThemeIcon = mounted && theme === "dark" ? Sun : Moon;
+
   return (
     <nav className="fixed w-full z-50 top-0 start-0 border-b border-gray-100 dark:border-dark-border bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-4">
@@ -30,9 +37,19 @@ export const Navbar: React.FC = () => {
           className="flex items-center space-x-2 rtl:space-x-reverse"
         >
           <div className="flex items-center gap-3">
-            <img src="/clientreachai.logo.png" alt="ClientReach.ai Logo" className="h-10 w-auto object-contain" />
+            <Image
+              src="/clientreachai.logo.png"
+              alt="ClientReach.ai Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-10 w-auto object-contain"
+              priority
+            />
             <div className="flex flex-col leading-none ml-[-10px]">
-              <span className="text-xl font-bold text-gray-900 dark:text-white">Client</span>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">
+                Client
+              </span>
               <span className="text-xl font-bold text-gray-900 dark:text-white  mt-[-10px]">
                 Reach<span className="text-brand-500">.ai</span>
               </span>
@@ -46,11 +63,11 @@ export const Navbar: React.FC = () => {
             className="p-2 text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 transition-colors"
             aria-label="Toggle theme"
           >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            <ThemeIcon size={20} />
           </button>
 
           <button
-            onClick={openCalendlyPopup}
+            onClick={openBookingPopup}
             className="hidden md:flex items-center gap-2 px-6 py-2.5 bg-brand-500 text-white font-medium rounded-full hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/20 hover:shadow-brand-500/30 hover:scale-105"
           >
             <Phone size={18} />
@@ -91,7 +108,7 @@ export const Navbar: React.FC = () => {
               <button
                 onClick={() => {
                   setIsOpen(false);
-                  openCalendlyPopup();
+                  openBookingPopup();
                 }}
                 className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-brand-500 text-white font-medium rounded-xl hover:bg-brand-600 transition-colors"
               >

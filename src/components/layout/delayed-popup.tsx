@@ -2,11 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+// ... imports
 import { X, ArrowRight } from "lucide-react";
-import { openCalendlyPopup } from "@/utils/calendly";
+import { useBooking } from "@/contexts/booking-context";
 
 export const DelayedPopup: React.FC = () => {
   const [show, setShow] = useState(false);
+  const { openBookingPopup } = useBooking();
 
   useEffect(() => {
     // 40 seconds delay
@@ -44,12 +46,13 @@ export const DelayedPopup: React.FC = () => {
             <button
               onClick={() => {
                 setShow(false);
-                openCalendlyPopup();
+                openBookingPopup();
               }}
               className="block w-full bg-brand-500 hover:bg-brand-600 text-white font-medium py-3 px-4 rounded-lg transition-colors"
             >
               Book My Free Audit
             </button>
+
             <button
               onClick={() => setShow(false)}
               className="block w-full text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-sm font-medium"

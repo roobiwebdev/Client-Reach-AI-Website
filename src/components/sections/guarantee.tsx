@@ -3,8 +3,8 @@
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import { useRef } from "react";
 import { ShieldCheck } from "lucide-react";
-import { openCalendlyPopup } from "@/utils/calendly";
 import Image from "next/image";
+import { useBooking } from "@/contexts/booking-context";
 
 const steps = [
   {
@@ -46,6 +46,7 @@ const StepCard: React.FC<StepCardProps> = ({
   targetScale,
 }) => {
   const container = useRef<HTMLDivElement>(null);
+  const { openBookingPopup } = useBooking();
 
   // useScroll will work properly since component is client-only
   const { scrollYProgress } = useScroll({
@@ -89,7 +90,7 @@ const StepCard: React.FC<StepCardProps> = ({
             {i === steps.length - 1 && (
               <div className="pt-4 md:pt-6">
                 <button
-                  onClick={openCalendlyPopup}
+                  onClick={openBookingPopup}
                   className="inline-flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 bg-brand-500 text-white text-sm md:text-base font-semibold rounded-full hover:bg-brand-600 transition-all duration-300 shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 hover:scale-105"
                 >
                   <ShieldCheck className="w-4 h-4 md:w-5 md:h-5" />

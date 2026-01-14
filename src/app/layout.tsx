@@ -104,6 +104,12 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+// ... imports
+import { BookingProvider } from "@/contexts/booking-context";
+import { BookingPopup } from "@/components/booking-popup";
+
+// ... (keep metadata and Viewport stuff same)
+
 export default function RootLayout({
   children,
 }: {
@@ -147,16 +153,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Calendly Widget */}
-        <link
-          href="https://assets.calendly.com/assets/external/widget.css"
-          rel="stylesheet"
-        />
-        <script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          type="text/javascript"
-          async
-        ></script>
+
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_ID && (
           <>
@@ -182,10 +179,13 @@ export default function RootLayout({
       <body className="bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased selection:bg-brand-500 selection:text-white font-sans">
         <StructuredData />
         <ThemeProvider>
-          {children}
-          {/* Chat Widget */}
-          <Analytics />
-          <ChatWidget />
+          <BookingProvider>
+            <BookingPopup />
+            {children}
+            {/* Chat Widget */}
+            <Analytics />
+            <ChatWidget />
+          </BookingProvider>
         </ThemeProvider>
       </body>
     </html>

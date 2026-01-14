@@ -1,14 +1,15 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export interface LayoutProps {
   children: ReactNode;
 }
 
-export type Theme = 'light' | 'dark';
+export type Theme = "light" | "dark";
 
 export interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
+  mounted: boolean;
 }
 
 export interface Testimonial {
