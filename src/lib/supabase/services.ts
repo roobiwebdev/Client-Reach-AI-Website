@@ -17,12 +17,12 @@ export type ServiceResult<T = void> =
  */
 function withTimeout<T>(
   promise: Promise<T> | any,
-  timeoutMs: number = 10000
+  timeoutMs: number = 10000,
 ): Promise<T> {
   return Promise.race([
     Promise.resolve(promise),
     new Promise<T>((_, reject) =>
-      setTimeout(() => reject(new Error("Request timed out")), timeoutMs)
+      setTimeout(() => reject(new Error("Request timed out")), timeoutMs),
     ),
   ]);
 }
@@ -41,7 +41,7 @@ export async function subscribeToNewsletter(
     source?: string;
     ip_address?: string | null;
     user_agent?: string | null;
-  }
+  },
 ): Promise<ServiceResult<InsertNewsletterSubscriber>> {
   try {
     // Check if Supabase client is available
@@ -197,7 +197,7 @@ export async function subscribeToWeeklyInsider(
     source?: string;
     ip_address?: string | null;
     user_agent?: string | null;
-  }
+  },
 ): Promise<ServiceResult<InsertWeeklyInsiderSubscriber>> {
   try {
     // Check if Supabase client is available
@@ -368,7 +368,7 @@ export async function requestCall(
     source?: string;
     ip_address?: string | null;
     user_agent?: string | null;
-  }
+  },
 ): Promise<ServiceResult<InsertCallRequest>> {
   try {
     // Check if Supabase client is available
@@ -516,6 +516,71 @@ export async function requestCall(
           ? error.message
           : "An unexpected error occurred while submitting call request",
       code: "UNEXPECTED_ERROR",
+    };
+  }
+}
+
+/**
+ * Submit Call Request to Webhook
+ * Sends the form data to an n8n webhook
+ *
+ * @param data - Form data including name, email, phone, company, and inquiry
+ * @returns ServiceResult indicating success or failure
+ */
+export async function submitCallRequestToWebhook(data: {
+  name: string;
+  email: string;
+  phone: string;
+  company?: string;
+  inquiry?: string;
+}): Promise<ServiceResult> {
+  try {
+    const webhookUrl =
+      "https://sifenclientreach.app.n8n.cloud/webhook-test/581da088-fd0d-4262-b540-2f1a9c08920c";
+
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company || "",
+        inquiry: data.inquiry || "",
+        submittedAt: new Date().toISOString(),
+      }),
+    });
+
+    if (!response.ok) {
+      // Try to parse error message if available
+      let errorMessage = "Failed to submit request";
+      try {
+        const errorData = await response.json();
+        errorMessage = errorData.message || errorMessage;
+      } catch (e) {
+        // Ignore JSON parse error
+      }
+
+      return {
+        success: false,
+        error: errorMessage,
+        code: `WEBHOOK_ERROR_${response.status}`,
+      };
+    }
+
+    return {
+      success: true,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error:
+        error instanceof Error
+          ? error.message
+          : "An unexpected error occurred while submitting the request",
+      code: "NETWORK_ERROR",
     };
   }
 }
