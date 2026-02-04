@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "ClientReach.ai - AI Workforce for Clinics",
+    name: "ClientReach.ai - AI Workforce for Businesses",
     short_name: "ClientReach.ai",
     description:
-      "AI-powered client acquisition and lead generation platform for aesthetic, dental, and healthcare clinics",
+      "AI-powered client acquisition and lead generation platform for growing businesses",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

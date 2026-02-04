@@ -20,15 +20,15 @@ export default function AboutPage() {
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Book a consultation with the Client Reach AI founders and see
-                how a smart AI team can help your clinic, from catching every
-                lead to answering patient questions, follow-ups, and bookings
+                how a smart AI team can support your business — from capturing
+                every lead to handling enquiries, follow-ups, and bookings
                 automatically.
                 <br />
                 <br />
-                In one call, we'll show you exactly where AI can bring back
-                missed revenue, make your front desk run smoothly, and ease
-                pressure on your staff, all without hiring more people or
-                harming the patient experience.
+                In a single call, we’ll show you exactly where AI can recover
+                missed revenue, streamline your operations, and reduce pressure
+                on your team — all without hiring more staff or compromising
+                the customer experience.
               </p>
               <button
                 onClick={openCalendlyPopup}
@@ -58,12 +58,20 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               Client Reach AI was founded by Alfie Tilson and Mahbhir Mahmud —
-              two young entrepreneurs on a mission to help clinics unlock the
-              full power of AI. Client Reach AI builds smart systems made for
-              clinics. They handle enquiries, follow-ups, lead checks, and
-              recover missed revenue — keeping everything running smoothly. This
-              boosts bookings and sales without needing more staff, so you can
-              focus on great treatments while AI handles the rest.
+              two entrepreneurs on a mission to help businesses unlock the full
+              potential of AI.
+              <br />
+              <br />
+              We build smart, scalable AI systems designed for real-world
+              operations. Our AI agents handle enquiries, follow-ups, lead
+              qualification, and revenue recovery — keeping businesses running
+              smoothly and efficiently.
+              <br />
+              <br />
+              By removing manual admin and operational bottlenecks, our systems
+              help businesses grow sales without increasing headcount, so owners
+              and teams can focus on what matters most while AI handles the
+              rest.
             </p>
           </div>
         </FadeIn>
@@ -86,12 +94,15 @@ export default function AboutPage() {
                   MISSION
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  At Client Reach AI, we give clinics smart digital workers that
-                  relieve teams hours of manual repetitive tasks whilst
-                  increasing revenue and scaling their business. They take care
-                  of admin, follow-ups, patient messages, and revenue tasks,
-                  helping your clinic grow while your team focuses on what
-                  matters most: amazing patient care.
+                  At Client Reach AI, we give businesses smart digital workers
+                  that remove hours of manual, repetitive tasks while increasing
+                  revenue and enabling scalable growth.
+                  <br />
+                  <br />
+                  Our AI systems handle admin, follow-ups, customer
+                  communication, and revenue-driving tasks — allowing businesses
+                  to operate more efficiently while teams focus on the work that
+                  truly matters.
                 </p>
               </div>
             </div>
@@ -103,11 +114,14 @@ export default function AboutPage() {
                   VISION
                 </h3>
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We believe clinics should have AI teams that work smoothly
-                  alongside their staff, improving patient experience, saving
-                  time, and helping the clinic grow. This means clinicians can
-                  focus on treatments, while smart AI handles enquiries,
-                  follow-ups, admin, and revenue tasks in the background.
+                  We believe businesses should have AI teams that work
+                  seamlessly alongside their people — saving time, improving
+                  customer experience, and supporting long-term growth.
+                  <br />
+                  <br />
+                  This allows teams to focus on their core work, while
+                  intelligent AI handles enquiries, follow-ups, admin, and
+                  revenue-driving tasks in the background.
                 </p>
               </div>
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
@@ -131,17 +145,17 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card
                 title="Digital Workers"
-                description="We deliver fully integrated teams of intelligent AI agents — digital workers designed to collaborate, automate, and scale across every area of your clinic."
+                description="We deliver fully integrated teams of intelligent AI agents — digital workers designed to collaborate, automate, and scale across every area of your business."
                 icon={<Cpu size={24} />}
               />
               <Card
                 title="Managed AI Agents"
-                description="We handle the setup, onboarding, optimisation, and ongoing management of your digital workforce — ensuring your AI agents perform seamlessly and deliver measurable results."
+                description="We handle the setup, onboarding, optimisation, and ongoing management of your digital workforce — ensuring your AI agents run seamlessly and deliver measurable business results."
                 icon={<Briefcase size={24} />}
               />
               <Card
                 title="AI Activate"
-                description="We help clinics cut through the complexity and confidently adopt AI through guided strategy, piloting, and implementation."
+                description="We help businesses cut through the complexity and confidently adopt AI through guided strategy, piloting, and implementation."
                 icon={<Rocket size={24} />}
               />
             </div>
@@ -154,11 +168,15 @@ export default function AboutPage() {
             Meet the Co-Founders
           </h2>
           <p className="text-center text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-            The Client Reach AI team brings diverse professional and
+            The Client Reach AI team brings a blend of professional and
             entrepreneurial experience, delivering advanced AI and automation
-            solutions for clinics of all sizes — from founder-run clinics to
-            large franchises — across industries such as aesthetics and
-            dentistry.
+            solutions for businesses of all sizes — from founder-led companies
+            to large, multi-location organisations.
+            <br />
+            <br />
+            Our work spans multiple industries, helping operators modernise
+            their systems, streamline operations, and scale efficiently with
+            AI.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mahbhir Card */}

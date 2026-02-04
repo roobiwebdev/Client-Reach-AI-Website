@@ -14,27 +14,25 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://clientreach.ai";
 
 export const metadata: Metadata = {
   title:
-    "AI Workforce for Clinics | Automated Client Acquisition & Lead Generation",
+    "AI Workforce for Businesses | Automated Revenue Growth & Lead Generation",
   description:
-    "Scale your clinic without scaling your payroll. ClientReach.ai provides AI-powered client acquisition, automated client outreach, and intelligent lead management for aesthetic, dental, and healthcare clinics. Increase revenue, save time, and cut costs with our digital workforce of AI agents.",
+    "Scale your business without increasing headcount. Client Reach AI provides AI-powered customer acquisition, automated outreach, and intelligent lead management. Increase revenue, expand capacity, and reduce operational costs with our digital workforce of AI agents.",
   keywords: [
-    "AI client acquisition",
     "AI lead generation",
-    "automated client outreach",
-    "AI workforce for clinics",
-    "clinic automation",
-    "dental AI",
-    "aesthetic clinic AI",
-    "healthcare AI solutions",
-    "patient acquisition AI",
-    "clinic revenue optimization",
+    "automated outreach",
+    "AI workforce for business",
+    "business automation",
     "AI receptionist",
-    "automated patient booking",
+    "automated booking",
+    "revenue optimization AI",
+    "digital workforce",
+    "sales AI agents",
+    "customer support AI",
   ],
   openGraph: {
-    title: "AI Workforce for Clinics | Automated Client Acquisition",
+    title: "AI Workforce for Businesses | Automated Revenue Growth",
     description:
-      "Scale your clinic without scaling your payroll. AI-powered client acquisition and lead generation for aesthetic, dental, and healthcare clinics.",
+      "Scale your business without increasing headcount. AI-powered customer acquisition and lead generation.",
     url: baseUrl,
     siteName: "ClientReach.ai",
     images: [
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
         url: `${baseUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "ClientReach.ai - AI Workforce for Clinics",
+        alt: "ClientReach.ai - AI Workforce for Businesses",
       },
     ],
     locale: "en_US",
@@ -50,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Workforce for Clinics | Automated Client Acquisition",
+    title: "AI Workforce for Businesses | Automated Revenue Growth",
     description:
-      "Scale your clinic without scaling your payroll. AI-powered client acquisition and lead generation.",
+      "Scale your business without increasing headcount. AI-powered lead generation and revenue recovery.",
     images: [`${baseUrl}/og-image.jpg`],
   },
   alternates: {
@@ -78,7 +76,7 @@ const Guarantee = dynamic(
             See Real Results in 30 Days or Get Your Money Back
           </p>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-400">
-            Launch your AI workforce within your clinic, with no risk.
+            Launch your AI workforce within your business, with no risk.
           </p>
         </div>
       </section>

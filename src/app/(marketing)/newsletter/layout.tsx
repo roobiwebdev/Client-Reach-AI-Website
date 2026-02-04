@@ -3,21 +3,20 @@ import type { Metadata } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://clientreach.ai";
 
 export const metadata: Metadata = {
-  title: "Newsletter | Stay Updated on AI Clinic Automation",
+  title: "Newsletter | Stay Updated on AI Business Automation",
   description:
-    "Subscribe to the ClientReach.ai newsletter for the latest insights on AI-powered client acquisition, clinic automation, and lead generation strategies for aesthetic, dental, and healthcare clinics.",
+    "Subscribe to the Client Reach AI newsletter for the latest insights on AI-powered customer acquisition, business automation, and lead generation strategies.",
   keywords: [
-    "clinic AI newsletter",
-    "healthcare AI updates",
-    "dental automation news",
-    "clinic automation insights",
-    "AI client acquisition tips",
-    "patient acquisition strategies",
+    "business AI newsletter",
+    "AI automation news",
+    "business automation insights",
+    "AI customer acquisition tips",
+    "lead generation strategies",
   ],
   openGraph: {
-    title: "Newsletter | Stay Updated on AI Clinic Automation",
+    title: "Newsletter | Stay Updated on AI Business Automation",
     description:
-      "Subscribe to the ClientReach.ai newsletter for the latest insights on AI-powered client acquisition and clinic automation.",
+      "Subscribe to the Client Reach AI newsletter for the latest insights on AI-powered revenue growth and business automation.",
     url: `${baseUrl}/newsletter`,
     images: [
       {
@@ -30,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Newsletter | Stay Updated on AI Clinic Automation",
+    title: "Newsletter | Stay Updated on AI Business Automation",
     description:
-      "Subscribe to the ClientReach.ai newsletter for the latest insights on AI-powered client acquisition.",
+      "Subscribe to the Client Reach AI newsletter for the latest insights on AI-powered revenue growth.",
   },
   alternates: {
     canonical: `${baseUrl}/newsletter`,

@@ -13,14 +13,14 @@ export const Transformation = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-6">
               How Client Reach AI Agents <br />
-              <span className="text-brand-500">Transform Your Clinic</span>
+              <span className="text-brand-500">Transform Your Business</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               <span className="italic font-medium">
-                Increase revenue, expand capacity, and cut operational costs
+                Increase revenue, expand capacity, and reduce operational costs
               </span>{" "}
-              - with intelligent AI agents built to scale your clinic without
-              increasing payroll.
+              — with intelligent AI agents built to scale your business without
+              increasing headcount.
             </p>
           </div>
         </FadeIn>

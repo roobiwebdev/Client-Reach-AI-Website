@@ -11,21 +11,21 @@ const steps = [
     number: "Step 1",
     title: "Consultation",
     description:
-      "Book a 1-on-1 consultation with one of the Client Reach AI team to pinpoint exactly where AI can create the biggest impact in your clinic - from capturing more bookings to streamlining patient communication and reducing admin load.",
+      "Book a 1-on-1 consultation with a Client Reach AI specialist to pinpoint exactly where AI can create the biggest impact in your business — from capturing more leads and enquiries to streamlining customer communication and reducing admin workload.",
     image: "/consultation.jpeg",
   },
   {
     number: "Step 2",
     title: "Integration",
     description:
-      "After we have your consultation and confirm the right AI setup for your clinic, we get everything built and installed for you. If you already use a CRM, we plug the system straight into it. If you don't have one yet, don't worry, our team will set everything up for you and connect your clinic to the CRM you prefer.",
+      "After your consultation, we confirm the right AI setup for your business and handle the full build and integration for you. If you already use a CRM, we plug the system straight into your existing setup. If you don’t have one yet, our team will set everything up and connect your business to the CRM that best fits your needs.",
     image: "/integrations.png",
   },
   {
     number: "Step 3",
     title: "The Client Reach Guarantee",
     description:
-      "If you're not completely satisfied with the results within 4 weeks of using our AI systems, we'll give you a full refund - no questions asked.",
+      "If you’re not completely satisfied with the results within 4 weeks of using our AI systems, we’ll give you a full refund — no questions asked.",
     image: "/guarentee.jpg",
   },
 ];
@@ -146,7 +146,7 @@ export const Guarantee = () => {
           See Real Results in 30 Days or Get Your Money Back
         </p>
         <p className="text-base md:text-lg text-gray-600 dark:text-gray-400">
-          Launch your AI workforce within your clinic, with no risk.
+          Launch your AI workforce within your business, with no risk.
         </p>
       </div>
 

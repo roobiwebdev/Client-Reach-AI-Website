@@ -8,16 +8,17 @@ export const EfficiencyCallout = () => (
   <section className="py-24 bg-white dark:bg-dark-bg">
     <div className="max-w-5xl mx-auto px-4 text-center">
       <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-        AI Tools Improve Efficiency. <br />
+        Unlock Hidden Revenue <br />
         <span className="text-brand-500">
-          An AI Workforce Drives Exponential Growth.
+          in Your Business
         </span>
       </h2>
       <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-10 max-w-3xl mx-auto">
-        Client Reach AI builds smart digital teams for clinics like AI
-        receptionists, follow-up helpers, patient coordinators, and marketing
-        assistants. They work together as one team to help you get more
-        bookings, save lost revenue, and keep your clinic running smoothly.
+        Client Reach AI builds smart digital teams for businesses — including AI
+        receptionists, follow-up agents, customer support assistants, and
+        marketing automation systems. These AI agents work together as one
+        digital workforce to help you capture more leads, recover lost revenue,
+        and keep your business running smoothly.
       </p>
       <button
         onClick={openCalendlyPopup}

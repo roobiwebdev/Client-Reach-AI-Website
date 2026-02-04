@@ -290,12 +290,12 @@ export const WeeklyInsiderForm = () => {
               Join the Community
             </span>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Get the Weekly Insider
+              Join the Inner Circle
             </h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Join thousands of medical professionals growing their practice
-              with AI. Get exclusive tips, strategies, and updates delivered to
-              your inbox.
+              Get exclusive insights on how top businesses are using AI to
+              automate growth, recover revenue, and save time. No spam — just
+              value.
             </p>
           </motion.div>
         </div>
@@ -348,15 +348,13 @@ export const WeeklyInsiderForm = () => {
                   aria-describedby={fieldErrors.name ? "name-error" : undefined}
                   disabled={isSubmitting || isRateLimited}
                   placeholder="John Doe"
-                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 outline-none ${
-                    fieldErrors.name
+                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 outline-none ${fieldErrors.name
                       ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                       : "border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
-                  } ${
-                    isSubmitting || isRateLimited
+                    } ${isSubmitting || isRateLimited
                       ? "opacity-60 cursor-not-allowed"
                       : ""
-                  }`}
+                    }`}
                 />
                 <AnimatePresence>
                   {fieldErrors.name && (
@@ -389,12 +387,11 @@ export const WeeklyInsiderForm = () => {
                   value={formData.company}
                   onChange={handleInputChange}
                   disabled={isSubmitting || isRateLimited}
-                  placeholder="Acme Clinic"
-                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 ${
-                    isSubmitting || isRateLimited
+                  placeholder="Acme Corporation"
+                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 ${isSubmitting || isRateLimited
                       ? "opacity-60 cursor-not-allowed"
                       : ""
-                  }`}
+                    }`}
                 />
               </div>
 
@@ -418,15 +415,13 @@ export const WeeklyInsiderForm = () => {
                   }
                   disabled={isSubmitting || isRateLimited}
                   placeholder="john@example.com"
-                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 outline-none ${
-                    fieldErrors.email
+                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 outline-none ${fieldErrors.email
                       ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                       : "border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
-                  } ${
-                    isSubmitting || isRateLimited
+                    } ${isSubmitting || isRateLimited
                       ? "opacity-60 cursor-not-allowed"
                       : ""
-                  }`}
+                    }`}
                 />
                 <AnimatePresence>
                   {fieldErrors.email && (
@@ -460,11 +455,10 @@ export const WeeklyInsiderForm = () => {
                   onChange={handleInputChange}
                   disabled={isSubmitting || isRateLimited}
                   placeholder="+1 (555) 000-0000"
-                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 ${
-                    isSubmitting || isRateLimited
+                  className={`w-full px-4 py-3 rounded-xl bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition-all duration-300 text-gray-900 dark:text-white placeholder:text-gray-400 ${isSubmitting || isRateLimited
                       ? "opacity-60 cursor-not-allowed"
                       : ""
-                  }`}
+                    }`}
                 />
               </div>
             </div>

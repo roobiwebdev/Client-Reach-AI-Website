@@ -348,18 +348,19 @@ export default function AiAgentsPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
                 Unlock <br />{" "}
                 <span className="text-brand-500">Hidden Revenue</span> <br /> in
-                Your Clinics
+                Your Business
               </h1>
               <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 mb-6 md:mb-8 leading-relaxed">
-                Every missed call is a missed opportunity. Client Reach AI's
-                Receptionist & Call Analysis Agents help aesthetic, dental, and
-                healthcare clinics recover lost leads.
+                Every missed call or enquiry is a missed opportunity. Client
+                Reach AI’s AI Receptionist and Call Analysis Agents help
+                businesses capture missed leads, recover lost revenue, and
+                improve conversion rates.
               </p>
             </div>
             <div className="h-[300px] md:h-[500px] w-full rounded-2xl overflow-hidden order-1 md:order-2">
               <img
                 src="/revenue.webp"
-                alt="Unlock Hidden Revenue in Your Clinics - AI Receptionist and Call Analysis Agents recovering lost leads and increasing bookings"
+                alt="Unlock Hidden Revenue in Your Business - AI Receptionist and Call Analysis Agents recovering lost leads and increasing bookings"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
@@ -500,15 +501,13 @@ export default function AiAgentsPage() {
                           fieldErrors.name ? "name-error" : undefined
                         }
                         disabled={isSubmitting || isRateLimited}
-                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${
-                          fieldErrors.name
+                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${fieldErrors.name
                             ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                             : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                        } ${
-                          isSubmitting || isRateLimited
+                          } ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                         placeholder="Jane Doe"
                       />
                       <AnimatePresence>
@@ -546,16 +545,14 @@ export default function AiAgentsPage() {
                           fieldErrors.email ? "email-error" : undefined
                         }
                         disabled={isSubmitting || isRateLimited}
-                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${
-                          fieldErrors.email
+                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${fieldErrors.email
                             ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                             : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                        } ${
-                          isSubmitting || isRateLimited
+                          } ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
-                        placeholder="jane@clinic.com"
+                          }`}
+                        placeholder="jane@business.com"
                       />
                       <AnimatePresence>
                         {fieldErrors.email && (
@@ -592,15 +589,13 @@ export default function AiAgentsPage() {
                           fieldErrors.phone ? "phone-error" : undefined
                         }
                         disabled={isSubmitting || isRateLimited}
-                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${
-                          fieldErrors.phone
+                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${fieldErrors.phone
                             ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                             : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                        } ${
-                          isSubmitting || isRateLimited
+                          } ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                         placeholder="+1 (555) 000-0000"
                       />
                       <AnimatePresence>
@@ -638,15 +633,13 @@ export default function AiAgentsPage() {
                           fieldErrors.company ? "company-error" : undefined
                         }
                         disabled={isSubmitting || isRateLimited}
-                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${
-                          fieldErrors.company
+                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all ${fieldErrors.company
                             ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                             : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                        } ${
-                          isSubmitting || isRateLimited
+                          } ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                         placeholder="Your Company"
                       />
                       <AnimatePresence>
@@ -685,15 +678,13 @@ export default function AiAgentsPage() {
                         }
                         disabled={isSubmitting || isRateLimited}
                         rows={4}
-                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all resize-none ${
-                          fieldErrors.inquiry
+                        className={`w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border outline-none transition-all resize-none ${fieldErrors.inquiry
                             ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                             : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                        } ${
-                          isSubmitting || isRateLimited
+                          } ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                         placeholder="Tell us about existing bottlenecks or current call volume..."
                       />
                       <AnimatePresence>
@@ -714,11 +705,10 @@ export default function AiAgentsPage() {
 
                     <div className="space-y-4 pt-2">
                       <label
-                        className={`flex items-start gap-3 cursor-pointer group ${
-                          isSubmitting || isRateLimited
+                        className={`flex items-start gap-3 cursor-pointer group ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                       >
                         <input
                           type="checkbox"
@@ -736,11 +726,10 @@ export default function AiAgentsPage() {
                         </span>
                       </label>
                       <label
-                        className={`flex items-start gap-3 cursor-pointer group ${
-                          isSubmitting || isRateLimited
+                        className={`flex items-start gap-3 cursor-pointer group ${isSubmitting || isRateLimited
                             ? "opacity-60 cursor-not-allowed"
                             : ""
-                        }`}
+                          }`}
                       >
                         <input
                           type="checkbox"

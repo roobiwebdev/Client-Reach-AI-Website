@@ -34,9 +34,8 @@ const AccordionItem: React.FC<{ question: string; answer: string }> = ({
         )}
       </button>
       <div
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-96 opacity-100 pb-5" : "max-h-0 opacity-0"
-        }`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-96 opacity-100 pb-5" : "max-h-0 opacity-0"
+          }`}
       >
         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
           {answer}
@@ -81,15 +80,15 @@ export default function DiscoverPage() {
               </span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
-              Unlock Hidden Revenue in Your Clinics <br /> Without Spending More
+              Unlock Hidden Revenue in Your Business <br /> Without Spending More
               on Marketing
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
               Booking a consultation with Client Reach AI helps you clearly see
-              where your clinic is losing time, money, and potential patients —
-              and how AI can fix it fast.
+              where your business is losing time, money, and potential customers
+              — and how AI can fix it fast.
             </p>
-            <button 
+            <button
               onClick={openCalendlyPopup}
               className="bg-brand-500 hover:bg-brand-600 text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg shadow-brand-500/30 hover:shadow-xl hover:shadow-brand-500/40 flex items-center gap-2 mx-auto"
             >
@@ -191,7 +190,7 @@ export default function DiscoverPage() {
               ))}
             </div>
             <div className="text-center mt-12">
-              <button 
+              <button
                 onClick={openCalendlyPopup}
                 className="bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-md"
               >
@@ -213,17 +212,17 @@ export default function DiscoverPage() {
               {
                 step: "01",
                 title: "Consultation",
-                desc: "Book a 1-on-1 consultation to pinpoint exactly where AI can create the biggest impact in your clinic — from capturing more bookings to streamlining patient communication and reducing admin load.",
+                desc: "Book a 1-on-1 consultation to pinpoint exactly where AI can create the biggest impact in your business — from capturing more leads and enquiries to streamlining customer communication and reducing admin workload.",
               },
               {
                 step: "02",
                 title: "Integration",
-                desc: "After consultation, we get everything built and installed for you within 2 weeks. If you already use a CRM, we plug straight into it. If not, we set one up for you.",
+                desc: "After the consultation, we design, build, and deploy your AI systems within 2 weeks. If you already use a CRM, we integrate directly into your existing setup. If not, we’ll set one up for you and ensure everything works seamlessly from day one.",
               },
               {
                 step: "03",
                 title: "The Guarantee",
-                desc: "If you're not completely satisfied with the results within 4 weeks of using our AI systems, we'll give you a full refund — no questions asked.",
+                desc: "If you’re not completely satisfied with the results within 4 weeks of using our AI systems, we’ll give you a full refund — no questions asked.",
               },
             ].map((item, idx) => (
               <StaggerItem
@@ -254,20 +253,20 @@ export default function DiscoverPage() {
           </h2>
           <div className="bg-white dark:bg-dark-card rounded-2xl p-6 border border-gray-100 dark:border-dark-border">
             <AccordionItem
-              question="How can AI help clinics increase revenue?"
-              answer="ClientReachAI's AI Call Analysis Agent captures and follows up on every missed or mishandled call, converting lost inquiries into booked appointments, boosting clinic revenue by up to 40%."
+              question="How can AI help businesses increase revenue?"
+              answer="Client Reach AI’s AI Call Analysis and Follow-Up Agents capture and respond to every missed or mishandled call or enquiry. By automatically following up and improving response times, lost opportunities are converted into booked calls, meetings, or sales — helping businesses recover lost revenue and increase conversion rates by up to 40%."
             />
             <AccordionItem
-              question="Can AI replace a receptionist at a clinic?"
-              answer="Our AI Receptionist supports – not replaces – your team. It handles call overflow, after-hours inquiries, and follow-ups so staff can focus on in-person patients."
+              question="Can AI replace a receptionist or admin role in a business?"
+              answer="Our AI Receptionist is designed to support — not replace — your team. It handles call overflow, after-hours enquiries, and automated follow-ups, allowing your staff to focus on high-value work and customer interactions."
             />
             <AccordionItem
-              question="Is this solution suitable for multi-location clinics?"
-              answer="With the right SaaS tools, you can expect increased operational efficiency, cost savings, and improved customer satisfaction. We focus on delivering measurable results that align with your business goals, such as higher conversion rates and improved productivity."
+              question="Is this solution suitable for multi-location businesses?"
+              answer="Yes. Our AI systems are built to scale across multiple locations and teams. Businesses can expect increased operational efficiency, lower costs, and improved customer experience — all managed from a centralised system. We focus on delivering measurable results that align with your business goals, including higher conversion rates, better response times, and improved productivity across the entire operation."
             />
             <AccordionItem
-              question="How quickly can a clinic see results?"
-              answer="Clinics typically see ROI within 30 days by recovering thousands in missed revenue from unconverted calls."
+              question="How quickly can a business see results?"
+              answer="Most businesses begin seeing ROI within 30 days by recovering missed revenue from unconverted calls, enquiries, and follow-ups that were previously slipping through the cracks."
             />
           </div>
         </FadeIn>

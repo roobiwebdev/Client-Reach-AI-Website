@@ -15,7 +15,7 @@ export function StructuredData() {
       url: baseUrl,
       logo: `${baseUrl}/logo.png`,
       description:
-        "AI-powered client acquisition and lead generation platform for aesthetic, dental, and healthcare clinics. Automated client outreach, AI receptionist agents, and intelligent lead management.",
+        "AI-powered client acquisition and lead generation platform for businesses. Automated outreach, AI receptionist agents, and intelligent lead management.",
       foundingDate: "2024",
       founders: [
         {
@@ -48,7 +48,7 @@ export function StructuredData() {
       name: "ClientReach.ai",
       url: baseUrl,
       description:
-        "AI-powered client acquisition and lead generation platform for clinics",
+        "AI-powered client acquisition and lead generation platform for businesses",
       potentialAction: {
         "@type": "SearchAction",
         target: {
@@ -73,10 +73,10 @@ export function StructuredData() {
         name: "United Kingdom",
       },
       description:
-        "AI-powered client acquisition, automated client outreach, AI receptionist agents, and intelligent lead management for aesthetic, dental, and healthcare clinics.",
+        "AI-powered customer acquisition, automated outreach, AI receptionist agents, and intelligent lead management for growing businesses.",
       offers: {
         "@type": "Offer",
-        description: "AI Workforce Solutions for Clinics",
+        description: "AI Workforce Solutions for Businesses",
       },
     };
 

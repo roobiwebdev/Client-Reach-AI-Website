@@ -215,8 +215,9 @@ export default function NewsletterPage() {
               Join the Inner Circle
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              Get exclusive insights on how top clinics are using AI to automate
-              growth, recover revenue, and save time. No spam, just value.
+              Get exclusive insights on how top businesses are using AI to
+              automate growth, recover revenue, and save time. No spam — just
+              value.
             </p>
           </div>
 
@@ -260,16 +261,14 @@ export default function NewsletterPage() {
                       onBlur={handleEmailBlur}
                       aria-invalid={emailError ? "true" : "false"}
                       aria-describedby={emailError ? "email-error" : undefined}
-                      className={`w-full pl-12 pr-4 py-4 rounded-xl bg-gray-50 dark:bg-gray-800 border transition-all duration-300 text-lg ${
-                        emailError || error
+                      className={`w-full pl-12 pr-4 py-4 rounded-xl bg-gray-50 dark:bg-gray-800 border transition-all duration-300 text-lg ${emailError || error
                           ? "border-red-300 dark:border-red-700 focus:ring-2 focus:ring-red-500"
                           : "border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-brand-500"
-                      } ${
-                        isSubmitting || isRateLimited
+                        } ${isSubmitting || isRateLimited
                           ? "opacity-60 cursor-not-allowed"
                           : ""
-                      } outline-none`}
-                      placeholder="doctor@clinic.com"
+                        } outline-none`}
+                      placeholder="name@business.com"
                       disabled={isSubmitting || isRateLimited}
                     />
                   </div>
@@ -326,7 +325,7 @@ export default function NewsletterPage() {
                   )}
                 </button>
                 <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-                  Join 2,000+ clinic owners. Unsubscribe at any time.
+                  Join 2,000+ business owners. Unsubscribe at any time.
                 </p>
               </form>
             )}
