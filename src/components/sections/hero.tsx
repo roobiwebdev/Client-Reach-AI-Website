@@ -16,13 +16,13 @@ export const Hero = () => (
       </div>
 
       <h1 className="text-4xl md:text-8xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 animate-fade-in-up [animation-delay:200ms]">
-        Scale Your Clinic. <br />
-        <span className="text-brand-500">Not Your Payroll.</span>
+        Scale Your Business. <br />
+        <span className="text-brand-500">Not Your Headcount.</span>
       </h1>
 
       <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-10 animate-fade-in-up [animation-delay:400ms]">
-        From one AI agent to a complete workforce - increase revenue, save time,
-        and cut costs without growing your team.
+        From one AI agent to a complete workforce - increase revenue, expand capacity, 
+        and reduce operational costs without growing your team.
       </p>
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">

@@ -62,7 +62,7 @@ export const Features = () => (
                 "Deliver 24/7 support across channels",
                 "First-line technical assistance",
                 "Ticket triage and escalation",
-                "Instant patient queries resolution",
+                "Instant customer queries resolution",
               ].map((item, i) => (
                 <li
                   key={i}
