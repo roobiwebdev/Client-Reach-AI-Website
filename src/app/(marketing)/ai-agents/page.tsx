@@ -91,7 +91,7 @@ export default function AiAgentsPage() {
 
   const validateInquiry = (inquiryValue: string): string | null => {
     if (!inquiryValue.trim()) {
-      return "Initial inquiry is required";
+      return "Inquiry is required";
     }
     return null;
   };
@@ -663,8 +663,7 @@ export default function AiAgentsPage() {
                         htmlFor="inquiry"
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
                       >
-                        Initial Inquiry/Interest{" "}
-                        <span className="text-red-500">*</span>
+                        Inquiry/Interest <span className="text-red-500">*</span>
                       </label>
                       <textarea
                         id="inquiry"
